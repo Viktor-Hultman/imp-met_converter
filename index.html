@@ -1,0 +1,66 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Converter for imperial and metric</title>
+</head>
+
+<body>
+    <div id="container">
+        <h1>Converter</h1>
+        <div id="form-container">
+            <div id="title">
+                <h3>Distances</h3>
+            </div>
+
+            <div id="forms">
+                <form class="distance-form" id="metric-to-imperial-dist">
+                    <label for="metric-dist">Metric distances</label>
+                    <select id="metric-dist" name="metric-dist" onchange="getMetricDistVal();">
+                        <option value="Centimeter">Centimeter</option>
+                        <option value="Meter">Meter</option>
+                        <option value="Kilometer">Kilometer</option>
+                        <option value="Mile">Mile</option>
+                    </select>
+                    <input type="number" id="metric-number" name="metric-number" min="1" value="1" onchange="getMetricNumVal();">
+                    <label for="to-imperial-dist">To:</label>
+                    <select id="to-imperial-dist" name="to-imperial-dist" onchange="getToImperialDistVal()">
+                        <option value="Inch">Inch</option>
+                        <option value="Foot">Foot</option>
+                        <option value="Yard">Yard</option>
+                        <option value="Mile">Mile</option>
+                    </select>
+                    <button type="button" id="met-to-imp-btn">Convert</button>
+                </form>
+
+                <form class="distance-form" id="imperial-to-metric-dist">
+                    <label for="imperial-dist">Imperial distances</label>
+                    <select id="imperial-dist" name="dimperial-dist" onchange="getImperialDistVal();">
+                        <option value="Inch">Inch</option>
+                        <option value="Foot">Foot</option>
+                        <option value="Yard">Yard</option>
+                        <option value="Mile">Mile</option>
+                    </select>
+                    <input type="number" id="imperial-number" name="imperial-number" min="1" value="1" onchange="getImperialNumVal();">
+                    <label for="to-metric-dist">To:</label>
+                    <select id="to-metric-dist" name="to-metric-dist" onchange="getToMetricDistVal();">
+                        <option value="Centimeter">Centimeter</option>
+                        <option value="Meter">Meter</option>
+                        <option value="Kilometer">Kilometer</option>
+                        <option value="Mile">Mile</option>
+                    </select>
+                    <button type="button" id="imp-to-met-btn">Convert</button>
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+
+    <script src="index.js"></script>
+</body>
+
+</html>
